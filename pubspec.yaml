@@ -1,0 +1,77 @@
+name: financeapp
+description: App Financeiro Completo com Riverpod, Supabase e API de Investimentos
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Backend / Database
+  supabase_flutter: ^2.5.0
+
+  # Navigation
+  go_router: ^13.2.0
+
+  # UI
+  flutter_svg: ^2.0.10+1
+  cached_network_image: ^3.3.1
+  fl_chart: ^0.68.0
+  shimmer: ^3.0.0
+  lottie: ^3.1.0
+  google_fonts: ^6.2.1
+  animated_text_kit: ^4.2.2
+  flutter_animate: ^4.5.0
+  iconsax: ^0.0.8
+
+  # Forms & Validation
+  reactive_forms: ^17.0.1
+  mask_text_input_formatter: ^2.9.0
+
+  # Local Storage
+  flutter_secure_storage: ^9.0.0
+  shared_preferences: ^2.2.3
+
+  # Utils
+  intl: ^0.20.2
+  uuid: ^4.4.0
+  equatable: ^2.0.5
+  dartz: ^0.10.1
+  dio: ^5.4.3+1
+  pretty_dio_logger: ^1.3.1
+  connectivity_plus: ^6.0.3
+
+  # Auth
+  local_auth: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.9
+  riverpod_generator: ^2.4.0
+  custom_lint: ^0.6.4
+  riverpod_lint: ^2.3.10
+  mockito: ^5.4.4
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  # fonts: (removed) Add your font files under assets/fonts/ and re-enable if available
