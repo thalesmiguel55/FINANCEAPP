@@ -6,7 +6,7 @@
 .pub-cache/
 .pub/
 build/
-{lib/
+[{]lib/
 *.iml
 *.ipr
 *.iws
