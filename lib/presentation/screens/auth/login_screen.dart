@@ -190,16 +190,19 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
           ),
           ElevatedButton(
             onPressed: () async {
+              final messenger = ScaffoldMessenger.of(context);
+              final navigator = Navigator.of(ctx);
+
               try {
                 await ref.read(authRepositoryProvider).resetPassword(emailCtrl.text.trim());
-                if (mounted) {
-                  Navigator.pop(ctx);
-                  ScaffoldMessenger.of(context).showSnackBar(
+                if (ctx.mounted) {
+                  navigator.pop();
+                  messenger.showSnackBar(
                     const SnackBar(content: Text('Email de recuperação enviado!')),
                   );
                 }
               } catch (e) {
-                if (mounted) Navigator.pop(ctx);
+                if (ctx.mounted) navigator.pop();
               }
             },
             child: const Text('Enviar'),
